@@ -1,5 +1,5 @@
 export async function fetchProperties() {
-  const response = await fetch("http://localhost:8080/api/properties");
+  const response = await fetch("https://kasa-xi-six.vercel.app/api/properties");
   if (!response.ok) {
     throw new Error("Erreur réseau");
   }
@@ -8,7 +8,7 @@ export async function fetchProperties() {
 
 export const fetchPropertyById = async (id) => {
   try {
-    const response = await fetch(`http://localhost:8080/api/properties/${id}`);
+    const response = await fetch(`https://kasa-xi-six.vercel.app/api/properties/${id}`);
     if (!response.ok) {
       throw new Error("Erreur lors de la récupération des détails du logement");
     }
